@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Ceramic Vase - CraftHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logos/logo_trunk_tools.svg" alt="CraftHub">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="crafts.html">Browse Crafts</a>
+                <a href="categories.html">Categories</a>
+                <a href="artists.html">Artists</a>
+            </div>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="craft-details-page">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt;
+            <a href="crafts.html">Crafts</a> &gt;
+            <a href="crafts.html?category=pottery">Pottery</a> &gt;
+            <span>Handmade Ceramic Vase</span>
+        </div>
+
+        <div class="craft-details-container">
+            <div class="craft-gallery">
+                <div class="main-image">
+                    <img src="images/Handmade Ceramic Vase.jpg" alt="Handmade Ceramic Vase">
+                    <button class="gallery-zoom">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                </div>
+                <div class="thumbnail-images">
+                    <img src="images/Handmade Ceramic Vase.jpg" alt="Thumbnail 1" class="active">
+                    <img src="images/vase1.webp" alt="Thumbnail 2">
+                    <img src="images/vase2.webp" alt="Thumbnail 3">
+                    <img src="images/vase4.webp" alt="Thumbnail 4">
+                </div>
+            </div>
+
+            <div class="craft-info">
+                <h1>Handmade Ceramic Vase</h1>
+                <div class="artist-info">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Sarah Johnson" class="artist-avatar">
+                    <div>
+                        <p class="artist-name">By Sarah Johnson</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5) • 128 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-section">
+                    <p class="price">$89.99</p>
+                    <p class="shipping">Free shipping</p>
+                </div>
+
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <div class="quantity-controls">
+                        <button class="btn-quantity" onclick="decreaseQuantity()">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button class="btn-quantity" onclick="increaseQuantity()">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary btn-large add-to-cart" 
+                        data-craft-id="1"
+                        data-craft-name="Handmade Ceramic Vase"
+                        data-craft-price="89.99"
+                        data-craft-image="images/Handmade Ceramic Vase.jpg"
+                        onclick="addToCart(event)">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                    <button class="btn btn-outline btn-large">
+                        <i class="far fa-heart"></i>
+                        Add to Wishlist
+                    </button>
+                </div>
+
+                <div class="craft-description">
+                    <h3>Description</h3>
+                    <p>This beautiful handmade ceramic vase is crafted with care by artisan Sarah Johnson. Each piece is unique, featuring a blend of traditional and modern design elements. The vase is perfect for displaying fresh flowers or as a standalone decorative piece.</p>
+                    
+                    <h3>Details</h3>
+                    <ul>
+                        <li>Handcrafted from high-quality ceramic</li>
+                        <li>Dimensions: 12" height x 6" diameter</li>
+                        <li>Food-safe and water-resistant</li>
+                        <li>Made in the USA</li>
+                        <li>Each piece is unique and may vary slightly</li>
+                        <li>Care instructions included</li>
+                    </ul>
+                </div>
+
+                <div class="shipping-info">
+                    <h3>Shipping & Returns</h3>
+                    <p>Free shipping on all orders over $50. Returns accepted within 30 days.</p>
+                    <ul>
+                        <li>Estimated delivery: 3-5 business days</li>
+                        <li>International shipping available</li>
+                        <li>Carefully packaged for safe delivery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="reviews-section">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-summary">
+                <div class="overall-rating">
+                    <h3>4.5</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>Based on 128 reviews</p>
+                </div>
+                <div class="rating-breakdown">
+                    <div class="rating-bar">
+                        <span>5 stars</span>
+                        <div class="bar"><div class="fill" style="width: 70%"></div></div>
+                        <span>70%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>4 stars</span>
+                        <div class="bar"><div class="fill" style="width: 20%"></div></div>
+                        <span>20%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>3 stars</span>
+                        <div class="bar"><div class="fill" style="width: 5%"></div></div>
+                        <span>5%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>2 stars</span>
+                        <div class="bar"><div class="fill" style="width: 3%"></div></div>
+                        <span>3%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>1 star</span>
+                        <div class="bar"><div class="fill" style="width: 2%"></div></div>
+                        <span>2%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-list">
+                <div class="review">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Reviewer" class="reviewer-avatar">
+                        <div>
+                            <h4>Emily Thompson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="review-date">2 weeks ago</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>Absolutely beautiful vase! The craftsmanship is exceptional, and it looks even better in person. Perfect size for my dining table.</p>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Reviewer" class="reviewer-avatar">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="review-date">1 month ago</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>Great quality and beautiful design. The vase arrived well-packaged and in perfect condition. Would definitely recommend!</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-outline load-more">Load More Reviews</button>
+        </section>
+
+        <section class="related-crafts">
+            <h2>You May Also Like</h2>
+            <div class="crafts-grid">
+                <div class="craft-card">
+                    <div class="craft-image">
+                        <img src="images/Pottery Bowl.webp" alt="Pottery Bowl">
+                        <div class="craft-tags">
+                            <span class="tag">Bestseller</span>
+                        </div>
+                    </div>
+                    <div class="craft-info">
+                        <h3>Pottery Bowl</h3>
+                        <p class="artist">By Ahmed Ali</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <p class="price">$45.00</p>
+                        <button class="btn btn-secondary add-to-cart"
+                            data-craft-id="2"
+                            data-craft-name="Pottery Bowl"
+                            data-craft-price="45.00"
+                            data-craft-image="images/Pottery Bowl.webp">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="craft-card">
+                    <div class="craft-image">
+                        <img src="images/Ceramic_Mug.webp" alt="Ceramic Mug">
+                        <div class="craft-tags">
+                            <span class="tag">Popular</span>
+                        </div>
+                    </div>
+                    <div class="craft-info">
+                        <h3>Ceramic Mug</h3>
+                        <p class="artist">By Emily Stone</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <p class="price">$19.99</p>
+                        <button class="btn btn-secondary add-to-cart"
+                            data-craft-id="6"
+                            data-craft-name="Ceramic Mug"
+                            data-craft-price="19.99"
+                            data-craft-image="images/Ceramic_Mug.webp">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="craft-card">
+                    <div class="craft-image">
+                        <img src="images/ceramic-plate.webp" alt="Ceramic Plate">
+                        <div class="craft-tags">
+                            <span class="tag">Bestseller</span>
+                        </div>
+                    </div>
+                    <div class="craft-info">
+                        <h3>Ceramic Plate</h3>
+                        <p class="artist">By Sophia Lee</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <p class="price">$35.00</p>
+                        <button class="btn btn-secondary add-to-cart"
+                            data-craft-id="10"
+                            data-craft-name="Ceramic Plate"
+                            data-craft-price="35.00"
+                            data-craft-image="images/Ceramic Plate.webp">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About CraftHub</h3>
+                <p>Your marketplace for unique handmade crafts from talented artisans worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - CraftHub Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-page">
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="logos/logo_trunk_tools.svg" alt="CraftHub" class="admin-logo" style="width:60px;height:60px;border-radius:50%;box-shadow:0 2px 8px rgba(44,62,80,0.10);background:#fff;padding:8px;object-fit:contain;display:block;margin:0 auto 10px auto;">
+                <h1>CraftHub</h1>
+                <p>Admin Panel</p>
+            </div>
+            <nav class="admin-nav">
+                <a href="admin-dashboard.html">
+                    <i class="fas fa-chart-line"></i>
+                    Dashboard
+                </a>
+                <a href="admin-crafts.html">
+                    <i class="fas fa-paint-brush"></i>
+                    Manage Crafts
+                </a>
+                <a href="admin-reports.html" class="active">
+                    <i class="fas fa-chart-bar"></i>
+                    Reports
+                </a>
+                <a href="admin-orders.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    Orders
+                </a>
+                <a href="categories.html">
+                    <i class="fas fa-tags"></i>
+                    Categories
+                </a>
+                <a href="artists.html">
+                    <i class="fas fa-users"></i>
+                    Artists
+                </a>
+                <a href="admin-settings.html">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="admin-profile">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Admin">
+                    <div class="profile-info">
+                        <h4>Admin User</h4>
+                        <p>Super Admin</p>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search reports...">
+                </div>
+                <div class="header-actions">
+                    <button class="btn-icon" title="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="admin-profile">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Admin">
+                        <div class="profile-dropdown">
+                            <span>Admin User</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="reports-content">
+                <div class="content-header">
+                    <h1>Reports & Analytics</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Export Report
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Generate Report
+                        </button>
+                    </div>
+                </div>
+
+                <div class="date-range-picker" style="margin-bottom:1.5rem;gap:1.5rem;display:flex;flex-wrap:wrap;align-items:center;">
+                    <div class="date-inputs">
+                        <div class="input-group">
+                            <label>From</label>
+                            <input type="date" value="2024-01-01">
+                        </div>
+                        <div class="input-group">
+                            <label>To</label>
+                            <input type="date" value="2024-02-15">
+                        </div>
+                    </div>
+                    <div class="quick-dates">
+                        <button class="btn btn-outline active">Last 7 Days</button>
+                        <button class="btn btn-outline">Last 30 Days</button>
+                        <button class="btn btn-outline">Last 90 Days</button>
+                        <button class="btn btn-outline">This Year</button>
+                    </div>
+                </div>
+
+                <div class="reports-grid">
+                    <div class="report-card sales-overview">
+                        <div class="card-header">
+                            <h2>Sales Overview</h2>
+                            <div class="card-actions">
+                                <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #4CAF50;"></span>
+                                <span>Revenue</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #2196F3;"></span>
+                                <span>Orders</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card category-distribution">
+                        <div class="card-header">
+                            <h2>Category Distribution</h2>
+                            <div class="card-actions">
+                                <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="report-card top-products">
+                        <div class="card-header">
+                            <h2>Top Selling Products</h2>
+                            <div class="card-actions">
+                                <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Sales</th>
+                                        <th>Revenue</th>
+                                        <th>Growth</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Handmade Ceramic Vase</td>
+                                        <td>45</td>
+                                        <td>$4,049.55</td>
+                                        <td class="positive">+12.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Handmade Beaded Necklace</td>
+                                        <td>38</td>
+                                        <td>$1,747.62</td>
+                                        <td class="positive">+8.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wooden Bowl</td>
+                                        <td>32</td>
+                                        <td>$2,080.00</td>
+                                        <td class="positive">+5.7%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="report-card customer-insights">
+                        <div class="card-header">
+                            <h2>Customer Insights</h2>
+                            <div class="card-actions">
+                                <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="insights-grid">
+                            <div class="insight-card">
+                                <h3>Average Order Value</h3>
+                                <p class="insight-value">$89.99</p>
+                                <p class="insight-change positive">+5.2% from last period</p>
+                            </div>
+                            <div class="insight-card">
+                                <h3>Customer Retention</h3>
+                                <p class="insight-value">78%</p>
+                                <p class="insight-change positive">+2.1% from last period</p>
+                            </div>
+                            <div class="insight-card">
+                                <h3>New Customers</h3>
+                                <p class="insight-value">234</p>
+                                <p class="insight-change positive">+15.3% from last period</p>
+                            </div>
+                            <div class="insight-card">
+                                <h3>Repeat Purchase Rate</h3>
+                                <p class="insight-value">45%</p>
+                                <p class="insight-change positive">+3.8% from last period</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card geographic-distribution">
+                        <div class="card-header">
+                            <h2>Geographic Distribution</h2>
+                            <div class="card-actions">
+                                <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="mapChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="report-card sales-by-time">
+                        <div class="card-header">
+                            <h2>Sales by Time of Day</h2>
+                            <div class="card-actions">
+                                <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="timeChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftHub - Handmade Crafts Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logos/logo_trunk_tools.svg" alt="CraftHub">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="crafts.html">Browse Crafts</a>
+                <a href="categories.html">Categories</a>
+                <a href="artists.html">Artists</a>
+            </div>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" class="btn btn-outline btn-login">Login</a>
+                <a href="register.html" class="btn btn-primary btn-register">Register</a>
+                <a href="profile.html" class="user-icon" style="display:none">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="btn btn-outline btn-logout" style="display:none">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover Unique Handmade Crafts</h1>
+                <p>Support local artisans and find one-of-a-kind pieces for your home</p>
+                <a href="crafts.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="featured-categories">
+            <h2>Popular Categories</h2>
+            <div class="category-grid">
+                <a href="#" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38" alt="Pottery">
+                    <h3>Pottery</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <img src="images/textiles.jpg" alt="Textiles">
+                    <h3>Textiles</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <img src="https://static01.nyt.com/images/2022/04/13/t-magazine/13tmag-raymond-slide-K086/13tmag-raymond-slide-K086-superJumbo.jpg?quality=75&auto=webp" alt="Jewelry">
+                    <h3>Jewelry</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <img src="images/woodwork.jpeg" alt="Woodwork">
+                    <h3>Woodwork</h3>
+                </a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Featured Crafts</h2>
+            <div class="product-grid">
+                <div class="product-card" style="background: #f5e9da;">
+                    <div class="product-image">
+                        <a href="craft-details.html">
+                            <img src="images/Handmade Ceramic Vase.jpg" alt="Handmade Vase">
+                        </a>
+                        <div class="product-tags">
+                            <span class="tag new">New</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="craft-details.html">Handmade Ceramic Vase</a></h3>
+                        <p class="artist">By Sarah Johnson</p>
+                        <p class="price">$89.99</p>
+                        <button class="btn btn-secondary add-to-cart" 
+                            data-craft-id="1"
+                            data-craft-name="Handmade Ceramic Vase"
+                            data-craft-price="89.99"
+                            data-craft-image="images/Handmade Ceramic Vase.jpg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" style="background: #f9f6f2;">
+                    <div class="product-image">
+                        <img src="images/Pottery Bowl.webp" alt="Pottery Bowl">
+                        <div class="product-tags">
+                            <span class="tag">Bestseller</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pottery Bowl</h3>
+                        <p class="artist">By Ahmed Ali</p>
+                        <p class="price">$45.00</p>
+                        <button class="btn btn-secondary add-to-cart"
+                            data-craft-id="2"
+                            data-craft-name="Pottery Bowl"
+                            data-craft-price="45.00"
+                            data-craft-image="images/Pottery Bowl.webp">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" style="background: #f3f7f0;">
+                    <div class="product-image">
+                        <img src="images/Woven Basket.jpg" alt="Woven Basket">
+                        <div class="product-tags">
+                            <span class="tag">Eco</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Woven Basket</h3>
+                        <p class="artist">By Maria Lopez</p>
+                        <p class="price">$32.50</p>
+                        <button class="btn btn-secondary add-to-cart"
+                            data-craft-id="3"
+                            data-craft-name="Woven Basket"
+                            data-craft-price="32.50"
+                            data-craft-image="images/Woven Basket.jpg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" style="background: #f6f0f7;">
+                    <div class="product-image">
+                        <img src="images/Handmade Necklace.webp" alt="Handmade Necklace">
+                        <div class="product-tags">
+                            <span class="tag new">New</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Handmade Necklace</h3>
+                        <p class="artist">By Lina Chen</p>
+                        <p class="price">$59.00</p>
+                        <button class="btn btn-secondary add-to-cart"
+                            data-craft-id="4"
+                            data-craft-name="Handmade Necklace"
+                            data-craft-price="59.00"
+                            data-craft-image="images/Handmade Necklace.webp">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" style="background: #f7f3f0;">
+                    <div class="product-image">
+                        <img src="images/Art Print.webp" alt="Art Print">
+                        <div class="product-tags">
+                            <span class="tag">Art</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Art Print</h3>
+                        <p class="artist">By Omar Nasser</p>
+                        <p class="price">$28.00</p>
+                        <button class="btn btn-secondary add-to-cart"
+                            data-craft-id="5"
+                            data-craft-name="Art Print"
+                            data-craft-price="28.00"
+                            data-craft-image="images/Art Print.webp">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" style="background: #f0f6f7;">
+                    <div class="product-image">
+                        <img src="images/Ceramic_Mug.webp" alt="Ceramic Mug">
+                        <div class="product-tags">
+                            <span class="tag">Popular</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ceramic Mug</h3>
+                        <p class="artist">By Emily Stone</p>
+                        <p class="price">$19.99</p>
+                        <button class="btn btn-secondary add-to-cart"
+                            data-craft-id="6"
+                            data-craft-name="Ceramic Mug"
+                            data-craft-price="19.99"
+                            data-craft-image="images/Ceramic_Mug.webp">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" style="background: #f7f6f0;">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1627123424574-724758594e93" alt="Leather Wallet">
+                        <div class="product-tags">
+                            <span class="tag">Gift</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Leather Wallet</h3>
+                        <p class="artist">By John Smith</p>
+                        <p class="price">$39.00</p>
+                        <button class="btn btn-secondary add-to-cart"
+                            data-craft-id="7"
+                            data-craft-name="Leather Wallet"
+                            data-craft-price="39.00"
+                            data-craft-image="https://images.unsplash.com/photo-1627123424574-724758594e93">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" style="background: #f0f3f7;">
+                    <div class="product-image">
+                        <img src="images/Glass Art Piece.jpg" alt="Glass Art Piece">
+                        <div class="product-tags">
+                            <span class="tag">Unique</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Glass Art Piece</h3>
+                        <p class="artist">By Anna Petrova</p>
+                        <p class="price">$120.00</p>
+                        <button class="btn btn-secondary add-to-cart"
+                            data-craft-id="8"
+                            data-craft-name="Glass Art Piece"
+                            data-craft-price="120.00"
+                            data-craft-image="images/Glass Art Piece.jpg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-crafthub">
+            <h2>Why Choose CraftHub?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Support Artisans</h3>
+                    <p>Direct support to local craftsmen and women</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-award"></i>
+                    <h3>Quality Assured</h3>
+                    <p>Every item is verified for quality</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-truck"></i>
+                    <h3>Secure Shipping</h3>
+                    <p>Carefully packaged and tracked delivery</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-undo"></i>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About CraftHub</h3>
+                <p>Your marketplace for unique handmade crafts from talented artisans worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 

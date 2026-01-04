@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Crafts - CraftHub Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-page">
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="logos/logo_trunk_tools.svg" alt="CraftHub" class="admin-logo" style="width:60px;height:60px;border-radius:50%;box-shadow:0 2px 8px rgba(44,62,80,0.10);background:#fff;padding:8px;object-fit:contain;display:block;margin:0 auto 10px auto;">
+                <h1>CraftHub</h1>
+                <p>Admin Panel</p>
+            </div>
+            <nav class="admin-nav">
+                <a href="admin-dashboard.html">
+                    <i class="fas fa-chart-line"></i>
+                    Dashboard
+                </a>
+                <a href="admin-crafts.html" class="active">
+                    <i class="fas fa-paint-brush"></i>
+                    Manage Crafts
+                </a>
+                <a href="admin-reports.html">
+                    <i class="fas fa-chart-bar"></i>
+                    Reports
+                </a>
+                <a href="admin-orders.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    Orders
+                </a>
+                <a href="categories.html">
+                    <i class="fas fa-tags"></i>
+                    Categories
+                </a>
+                <a href="artists.html">
+                    <i class="fas fa-users"></i>
+                    Artists
+                </a>
+                <a href="admin-settings.html">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="admin-profile">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Admin">
+                    <div class="profile-info">
+                        <h4>Admin User</h4>
+                        <p>Super Admin</p>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search crafts...">
+                </div>
+                <div class="header-actions">
+                    <button class="btn-icon" title="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="admin-profile">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Admin">
+                        <div class="profile-dropdown">
+                            <span>Admin User</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="crafts-content">
+                <div class="content-header">
+                    <h1>Manage Crafts</h1>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Add New Craft
+                    </button>
+                </div>
+
+                <div class="filters-bar" style="margin-bottom:1.5rem;gap:1.5rem;display:flex;flex-wrap:wrap;align-items:center;">
+                    <div class="filter-group">
+                        <label>Category:</label>
+                        <select>
+                            <option value="">All Categories</option>
+                            <option value="pottery">Pottery</option>
+                            <option value="textiles">Textiles</option>
+                            <option value="jewelry">Jewelry</option>
+                            <option value="woodwork">Woodwork</option>
+                            <option value="paintings">Paintings</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Status:</label>
+                        <select>
+                            <option value="">All Status</option>
+                            <option value="active">Active</option>
+                            <option value="pending">Pending</option>
+                            <option value="draft">Draft</option>
+                            <option value="archived">Archived</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sort By:</label>
+                        <select>
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="name">Name</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="crafts-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" class="select-all">
+                                </th>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Date Added</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38" alt="Product">
+                                    <div>
+                                        <h4>Handmade Ceramic Vase</h4>
+                                        <p>By Sarah Johnson</p>
+                                    </div>
+                                </td>
+                                <td>Pottery</td>
+                                <td>$89.99</td>
+                                <td>15</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>2024-02-15</td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn-icon" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Duplicate">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1583241475880-683d3a430d8b" alt="Product">
+                                    <div>
+                                        <h4>Handmade Beaded Necklace</h4>
+                                        <p>By Maria Garcia</p>
+                                    </div>
+                                </td>
+                                <td>Jewelry</td>
+                                <td>$45.99</td>
+                                <td>8</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>2024-02-14</td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn-icon" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Duplicate">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1565193566173-7a0b9d7c6382" alt="Product">
+                                    <div>
+                                        <h4>Hand-carved Wooden Bowl</h4>
+                                        <p>By James Wilson</p>
+                                    </div>
+                                </td>
+                                <td>Woodwork</td>
+                                <td>$65.00</td>
+                                <td>0</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>2024-02-13</td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn-icon" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Duplicate">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-chevron-left"></i>
+                        Previous
+                    </button>
+                    <div class="page-numbers">
+                        <button class="btn btn-outline active">1</button>
+                        <button class="btn btn-outline">2</button>
+                        <button class="btn btn-outline">3</button>
+                        <span>...</span>
+                        <button class="btn btn-outline">10</button>
+                    </div>
+                    <button class="btn btn-outline">
+                        Next
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html> 

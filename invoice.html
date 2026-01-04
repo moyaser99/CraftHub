@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - CraftHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body class="invoice-page">
+    <div class="invoice-container">
+        <div class="invoice-header">
+            <div class="company-info">
+                <h1>CraftHub</h1>
+                <p>123 Craft Street</p>
+                <p>Artisan District, CA 90210</p>
+                <p>contact@crafthub.com</p>
+                <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="invoice-info">
+                <h2>INVOICE</h2>
+                <div class="invoice-details">
+                    <div class="detail-group">
+                        <label>Invoice Number:</label>
+                        <span>INV-2024-001</span>
+                    </div>
+                    <div class="detail-group">
+                        <label>Date Issued:</label>
+                        <span>February 15, 2024</span>
+                    </div>
+                    <div class="detail-group">
+                        <label>Due Date:</label>
+                        <span>March 15, 2024</span>
+                    </div>
+                    <div class="detail-group">
+                        <label>Status:</label>
+                        <span class="status-badge paid">Paid</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="invoice-body">
+            <div class="customer-info">
+                <h3>Bill To:</h3>
+                <div class="customer-details">
+                    <p class="customer-name">Emily Thompson</p>
+                    <p>456 Customer Avenue</p>
+                    <p>Apt 789</p>
+                    <p>Customer City, CA 90211</p>
+                    <p>emily.thompson@email.com</p>
+                    <p>+1 (555) 987-6543</p>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38" alt="Product">
+                                </td>
+                                <td>
+                                    <h4>Handmade Ceramic Vase</h4>
+                                    <p>By Sarah Johnson</p>
+                                </td>
+                                <td>1</td>
+                                <td>$89.99</td>
+                                <td>$89.99</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="https://images.unsplash.com/photo-1583241475880-683d3a430d8b" alt="Product">
+                                </td>
+                                <td>
+                                    <h4>Handmade Beaded Necklace</h4>
+                                    <p>By Maria Garcia</p>
+                                </td>
+                                <td>2</td>
+                                <td>$45.99</td>
+                                <td>$91.98</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="payment-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span>$181.97</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span>$12.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (8%):</span>
+                    <span>$14.56</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span>$208.53</span>
+                </div>
+            </div>
+
+            <div class="payment-details">
+                <h3>Payment Details</h3>
+                <div class="payment-info">
+                    <div class="payment-method">
+                        <i class="fas fa-credit-card"></i>
+                        <div>
+                            <h4>Credit Card</h4>
+                            <p>**** **** **** 4242</p>
+                        </div>
+                    </div>
+                    <div class="payment-date">
+                        <label>Payment Date:</label>
+                        <span>February 15, 2024</span>
+                    </div>
+                    <div class="transaction-id">
+                        <label>Transaction ID:</label>
+                        <span>txn_123456789</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shipping-details">
+                <h3>Shipping Information</h3>
+                <div class="shipping-info">
+                    <div class="shipping-address">
+                        <h4>Shipping Address:</h4>
+                        <p>Emily Thompson</p>
+                        <p>456 Customer Avenue</p>
+                        <p>Apt 789</p>
+                        <p>Customer City, CA 90211</p>
+                    </div>
+                    <div class="shipping-method">
+                        <h4>Shipping Method:</h4>
+                        <p>Standard Shipping (3-5 business days)</p>
+                        <p>Tracking Number: SH123456789</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notes">
+                <h3>Notes</h3>
+                <p>Thank you for your purchase! Your items will be carefully packaged and shipped within 1-2 business days. If you have any questions about your order, please contact our customer service team.</p>
+            </div>
+        </div>
+
+        <div class="invoice-footer">
+            <div class="footer-content">
+                <div class="terms">
+                    <h4>Terms & Conditions</h4>
+                    <p>Payment is due within 30 days. Please include invoice number on your check.</p>
+                </div>
+                <div class="contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@crafthub.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="btn btn-outline">
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-print"></i>
+                    Print Invoice
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html> 

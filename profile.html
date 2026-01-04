@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - CraftHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logos/logo_trunk_tools.svg" alt="CraftHub Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" class="btn btn-outline btn-login">Login</a>
+                <a href="register.html" class="btn btn-primary btn-register">Register</a>
+                <a href="profile.html" class="user-icon active">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="btn btn-outline btn-logout" style="display:none">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <main class="profile-container">
+        <div class="profile-sidebar">
+            <div class="user-info">
+                <img src="images/profile-placeholder.jpg" alt="Profile Picture" class="profile-picture">
+                <h3>John Doe</h3>
+                <p>john.doe@example.com</p>
+            </div>
+            <nav class="profile-nav">
+                <a href="#" class="active" data-section="account-section">
+                    <i class="fas fa-user"></i> Account
+                </a>
+                <a href="#" data-section="orders-section">
+                    <i class="fas fa-shopping-bag"></i> Orders
+                </a>
+                <a href="#" data-section="addresses-section">
+                    <i class="fas fa-map-marker-alt"></i> Addresses
+                </a>
+                <a href="#" data-section="payment-section">
+                    <i class="fas fa-credit-card"></i> Payment Methods
+                </a>
+                <a href="#" data-section="security-section">
+                    <i class="fas fa-shield-alt"></i> Security
+                </a>
+            </nav>
+        </div>
+
+        <div class="profile-content">
+            <!-- Account Section -->
+            <section id="account-section" class="profile-section active">
+                <h2>Account Information</h2>
+                <form id="account-form" class="profile-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" value="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" value="+1 234 567 8900">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </section>
+
+            <!-- Orders Section -->
+            <section id="orders-section" class="profile-section">
+                <h2>Order History</h2>
+                <div class="orders-list">
+                    <div class="order-card">
+                        <div class="order-header">
+                            <span class="order-id">#ORD-2024-001</span>
+                            <span class="order-date">March 15, 2024</span>
+                            <span class="order-status">Delivered</span>
+                        </div>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <img src="images/product1.jpg" alt="Product 1">
+                                <div class="item-details">
+                                    <h4>Handmade Ceramic Vase</h4>
+                                    <p>Quantity: 1</p>
+                                    <p class="price">$49.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <span class="order-total">Total: $49.99</span>
+                            <button class="btn btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Addresses Section -->
+            <section id="addresses-section" class="profile-section">
+                <h2>Saved Addresses</h2>
+                <div class="addresses-list">
+                    <!-- Example address -->
+                    <div class="address-card">
+                        <div class="address-info">
+                            <h4>Home</h4>
+                            <p>123 Main St, City, Country</p>
+                            <p>+1 234 567 8900</p>
+                        </div>
+                        <div class="address-actions">
+                            <button class="btn btn-outline">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment Methods Section -->
+            <section id="payment-section" class="profile-section">
+                <h2>Payment Methods</h2>
+                <div class="payment-methods-list">
+                    <!-- Example payment method -->
+                    <div class="payment-card">
+                        <div class="card-info">
+                            <i class="fas fa-credit-card"></i>
+                            <span>**** **** **** 1234</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-outline">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security Section -->
+            <section id="security-section" class="profile-section">
+                <h2>Security Settings</h2>
+                <div class="security-settings">
+                    <div class="security-item">
+                        <div class="security-info">
+                            <h4>Password</h4>
+                            <p>Last changed 3 months ago</p>
+                        </div>
+                        <button id="change-password" class="btn btn-secondary">Change Password</button>
+                    </div>
+                    <div class="security-item">
+                        <div class="security-info">
+                            <h4>Two-Factor Authentication</h4>
+                            <p>Add an extra layer of security to your account</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="2fa-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="security-item">
+                        <div class="security-info">
+                            <h4>Delete Account</h4>
+                            <p>Permanently delete your account and all associated data</p>
+                        </div>
+                        <button id="delete-account" class="btn btn-danger">Delete Account</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About CraftHub</h3>
+                    <p>Your one-stop destination for unique handmade crafts and artisanal products.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CraftHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 

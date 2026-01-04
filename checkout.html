@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - CraftHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logos/logo_trunk_tools.svg" alt="CraftHub">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="crafts.html">Browse Crafts</a>
+                <a href="categories.html">Categories</a>
+                <a href="artists.html">Artists</a>
+            </div>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a>
+                <a href="login.html" class="btn btn-outline btn-login">Login</a>
+                <a href="register.html" class="btn btn-primary btn-register">Register</a>
+                <a href="profile.html" class="user-icon" style="display:none">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="btn btn-outline btn-logout" style="display:none">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="checkout-page">
+     
+            <div class="checkout-content">
+                <form class="checkout-form">
+                    <section class="form-section shipping-section">
+                        <h2>Shipping Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" name="fullname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" name="country" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code</label>
+                                <input type="text" id="zip" name="zip" required>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="form-section payment-section">
+                        <h2>Payment Method</h2>
+                        <div class="payment-options" style="display: flex; gap: 2rem; align-items: center; margin-bottom: 1.2rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor:pointer;">
+                                <input type="radio" name="payment" value="cash" id="pay-cash">
+                                <i class="fas fa-money-bill-wave"></i> Cash on Delivery
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor:pointer;">
+                                <input type="radio" name="payment" value="credit" checked id="pay-credit">
+                                <i class="fas fa-credit-card"></i> Credit Card
+                            </label>
+                        </div>
+                        <div class="form-row" id="credit-fields">
+                            <div class="form-group">
+                                <label for="cardnumber">Card Number</label>
+                                <input type="text" id="cardnumber" name="cardnumber" maxlength="19" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" maxlength="4" required>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="checkout-actions">
+                        <a href="cart.html" class="btn btn-outline back-btn"><i class="fas fa-arrow-left"></i>Back to Cart</a>
+                        <button type="submit" class="btn btn-primary continue-btn">Complete Purchase <i class="fas fa-check"></i></button>
+                    </div>
+                </form>
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-items">
+                        <div class="summary-item">
+                            <div class="item-info">
+                                <img src="images/Handmade Ceramic Vase.jpg" alt="Handmade Ceramic Vase">
+                                <div>
+                                    <h4>Handmade Ceramic Vase</h4>
+                                    <p>Qty: 1</p>
+                                </div>
+                            </div>
+                            <span class="item-price">$89.99</span>
+                        </div>
+                        <div class="summary-item">
+                            <div class="item-info">
+                                <img src="images/Pottery Bowl.webp" alt="Pottery Bowl">
+                                <div>
+                                    <h4>Pottery Bowl</h4>
+                                    <p>Qty: 1</p>
+                                </div>
+                            </div>
+                            <span class="item-price">$45.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <div class="item-info">
+                                <img src="images/Handmade Necklace.webp" alt="Handmade Necklace">
+                                <div>
+                                    <h4>Handmade Necklace</h4>
+                                    <p>Qty: 1</p>
+                                </div>
+                            </div>
+                            <span class="item-price">$59.00</span>
+                        </div>
+                    </div>
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>$193.99</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>$15.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span>$16.80</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>$225.79</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About CraftHub</h3>
+                <p>Your marketplace for unique handmade crafts from talented artisans worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 

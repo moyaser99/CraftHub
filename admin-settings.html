@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - CraftHub Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-page">
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="logos/logo_trunk_tools.svg" alt="CraftHub" class="admin-logo" style="width:60px;height:60px;border-radius:50%;box-shadow:0 2px 8px rgba(44,62,80,0.10);background:#fff;padding:8px;object-fit:contain;display:block;margin:0 auto 10px auto;">
+                <h1>CraftHub</h1>
+                <p>Admin Panel</p>
+            </div>
+            <nav class="admin-nav">
+                <a href="admin-dashboard.html">
+                    <i class="fas fa-chart-line"></i>
+                    Dashboard
+                </a>
+                <a href="admin-crafts.html">
+                    <i class="fas fa-paint-brush"></i>
+                    Manage Crafts
+                </a>
+                <a href="admin-reports.html">
+                    <i class="fas fa-chart-bar"></i>
+                    Reports
+                </a>
+                <a href="admin-orders.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    Orders
+                </a>
+                <a href="categories.html">
+                    <i class="fas fa-tags"></i>
+                    Categories
+                </a>
+                <a href="artists.html">
+                    <i class="fas fa-users"></i>
+                    Artists
+                </a>
+                <a href="admin-settings.html" class="active">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="admin-profile">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Admin">
+                    <div class="profile-info">
+                        <h4>Admin User</h4>
+                        <p>Super Admin</p>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search settings...">
+                </div>
+                <div class="header-actions">
+                    <button class="btn-icon" title="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="admin-profile">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Admin">
+                        <div class="profile-dropdown">
+                            <span>Admin User</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="settings-content">
+                <div class="content-header">
+                    <h1>Admin Settings</h1>
+                </div>
+                <form class="settings-form" style="max-width:500px;margin:2rem auto;background:#fff;padding:2rem 1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(44,62,80,0.07);">
+                    <div class="form-group">
+                        <label for="admin-email">Email Address</label>
+                        <input type="email" id="admin-email" value="admin@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-password">New Password</label>
+                        <input type="password" id="admin-password" placeholder="Enter new password">
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-language">Language</label>
+                        <select id="admin-language">
+                            <option value="en" selected>English</option>
+                            <option value="ar">العربية</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;margin-top:1.5rem;">Save Changes</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html> 

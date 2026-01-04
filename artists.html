@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists - CraftHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logos/logo_trunk_tools.svg" alt="CraftHub">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="crafts.html">Browse Crafts</a>
+                <a href="categories.html">Categories</a>
+                <a href="artists.html" class="active">Artists</a>
+            </div>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count"></span>
+                </a>
+                <a href="login.html" class="btn btn-outline btn-login">Login</a>
+                <a href="register.html" class="btn btn-primary btn-register">Register</a>
+                <a href="profile.html" class="user-icon" style="display:none">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="btn btn-outline btn-logout" style="display:none">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-header">
+            <h2>Meet Our Artists</h2>
+            <p>Discover the talented artisans behind our unique handmade crafts.</p>
+        </section>
+        <section class="artists-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 3rem;">
+            <div class="artist-card" style="background: #fff; border-radius: 16px; box-shadow: 0 2px 12px 0 rgba(184,115,51,0.07); padding: 2rem 1.5rem; text-align: center;">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                <h3>Sarah Johnson</h3>
+                <p style="color: var(--text-light); font-size: 1rem;">Ceramic artist known for her elegant vases and pottery.</p>
+            </div>
+            <div class="artist-card" style="background: #fff; border-radius: 16px; box-shadow: 0 2px 12px 0 rgba(184,115,51,0.07); padding: 2rem 1.5rem; text-align: center;">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmed Ali" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                <h3>Ahmed Ali</h3>
+                <p style="color: var(--text-light); font-size: 1rem;">Master potter with a passion for traditional and modern bowls.</p>
+            </div>
+            <div class="artist-card" style="background: #fff; border-radius: 16px; box-shadow: 0 2px 12px 0 rgba(184,115,51,0.07); padding: 2rem 1.5rem; text-align: center;">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Maria Lopez" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                <h3>Maria Lopez</h3>
+                <p style="color: var(--text-light); font-size: 1rem;">Basket weaver creating eco-friendly and beautiful baskets.</p>
+            </div>
+            <div class="artist-card" style="background: #fff; border-radius: 16px; box-shadow: 0 2px 12px 0 rgba(184,115,51,0.07); padding: 2rem 1.5rem; text-align: center;">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lina Chen" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                <h3>Lina Chen</h3>
+                <p style="color: var(--text-light); font-size: 1rem;">Jewelry designer specializing in handmade necklaces.</p>
+            </div>
+            <div class="artist-card" style="background: #fff; border-radius: 16px; box-shadow: 0 2px 12px 0 rgba(184,115,51,0.07); padding: 2rem 1.5rem; text-align: center;">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Omar Nasser" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                <h3>Omar Nasser</h3>
+                <p style="color: var(--text-light); font-size: 1rem;">Painter and print artist with a modern touch.</p>
+            </div>
+            <div class="artist-card" style="background: #fff; border-radius: 16px; box-shadow: 0 2px 12px 0 rgba(184,115,51,0.07); padding: 2rem 1.5rem; text-align: center;">
+                <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Fatima Hassan" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                <h3>Fatima Hassan</h3>
+                <p style="color: var(--text-light); font-size: 1rem;">Textile artist and rug maker with vibrant designs.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About CraftHub</h3>
+                <p>Your marketplace for unique handmade crafts from talented artisans worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftHub. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html> 
